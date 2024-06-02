@@ -1,0 +1,20 @@
+config:
+  blocking: false
+  description: ''
+  mlserver: false
+  model_name: e2e_iris
+  model_uri: file:///home/s2228293/.config/zenml/local_stores/fa03f0c4-8db1-4c18-b163-d4906619b2ba/mlruns/958826889361170078/676ed65bb41640f69da6b13d4b9175fd/artifacts/model
+  model_version: '1'
+  name: model
+  pipeline_name: training_pipeline
+  pipeline_step_name: ''
+  registry_model_name: null
+  registry_model_stage: null
+  registry_model_version: null
+  root_runtime_path: null
+  service_name: zenml-model
+  silent_daemon: false
+  singleton: false
+  timeout: 60
+  type: zenml.integrations.mlflow.services.mlflow_deployment.MLFlowDeploymentConfig
+  workers: 1

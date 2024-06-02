@@ -1,0 +1,17 @@
+# environment configuration
+settings:
+  docker:
+    required_integrations:
+      - aws
+      - evidently
+      - kubeflow
+      - kubernetes
+      - mlflow
+      - sklearn
+      - slack
+
+
+# configuration of the Model Control Plane
+model:
+  name: e2e_iris
+  version: staging

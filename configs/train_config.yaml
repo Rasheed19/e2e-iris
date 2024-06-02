@@ -1,0 +1,46 @@
+# environment configuration
+settings:
+  docker:
+    required_integrations:
+      - aws
+      - evidently
+      - kubeflow
+      - kubernetes
+      - mlflow
+      - sklearn
+      - slack
+
+# configuration of steps  
+steps:
+  model_trainer:
+    parameters:
+      name: e2e_iris
+  promote_with_metric_compare:
+    parameters:
+      mlflow_model_name: e2e_iris
+
+# configuration of the Model Control Plane
+model:
+  name: e2e_iris
+  description: An end-to-end ML pipeline for a classification problem
+  tags:
+   - e2e
+   - batch
+   - ZenML delivered
+
+# pipeline level extra configurations
+parameters:
+  target_env: staging
+  param_grid:
+    n_estimators:
+      - 100
+      - 200
+      - 300
+    learning_rate:
+      - 0.1
+      - 0.01
+    max_depth:
+      - 2
+      - 4
+      - 6
+      
