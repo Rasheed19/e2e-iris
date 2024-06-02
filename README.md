@@ -1,7 +1,7 @@
 # e2e-iris
 This project showcases an end-to-end machine learning project. It makes use of the the [ZenML](https://www.zenml.io/) machine learning 
 oprations (MLOps) structure to develop both the model steps
-and pipelines. A classification model is trained on the [iris dataset](https://en.wikipedia.org/wiki/Iris_flower_data_set) and its entire life cycle is monitored via the MLFlow model tracking. The model is deployed locally using the MLFlow deployment service. An interactive dashboard  is built using the [shiny](https://shiny.posit.co/py/) python framework to showcase batch prediction while the MLFlow deployment service daemon is running locally.
+and pipelines. A classification model is trained on the [iris dataset](https://en.wikipedia.org/wiki/Iris_flower_data_set) and its entire life cycle is monitored via the MLflow model tracking. The model is deployed locally using the MLflow deployment service. An interactive dashboard  is built using the [shiny](https://shiny.posit.co/py/) python framework to showcase batch prediction while the MLflow deployment service daemon is running locally.
 
 ![Dashboard UI](assets/training_pipeline.png)
 ![Dashboard UI](assets/dashboard_ui.png)
@@ -43,13 +43,13 @@ and pipelines. A classification model is trained on the [iris dataset](https://e
    ```
     python run.py --only-deployment
     ```
-    This will deploy the best and latest model registered in the model registory as an MLFlow Deplyment Service which will run locally.
+    This will deploy the best and latest model registered in the model registory as an MLflow Deplyment Service which will run locally.
 
 1. To use the running deployment service for prediction in an interactive app, start the shiny app by running 
     ```
     shiny run app.py --port PORT_NUMBER
     ```  
-    where `PORT_NUMBER` is the port at which you want the app to run. Note that the ZenML server and MLFlow model deployment service run at 8237 and 8000 respectively, thus you might need to use a port different to these.
+    where `PORT_NUMBER` is the port at which you want the app to run. Note that the ZenML server and MLflow model deployment service run at 8237 and 8000 respectively, thus you might need to use a port different to these.
     
 ## What next
 The next project, based on this, will be to run the ZenML stacks (both the training and deployment) on a remote server such as the GCP or AWS. One of the benefits of using the ZenML framework is that it allows you to play around your ideas locally without worrying about cloud cost, and when you are ready to deploy to a remote server, you will not need to change your written codes to conform with your platform of choice. All what you will need to do is to change the flavour of your stacks from local to remote. Check the [ZenML website](https://www.zenml.io/) to read more about its benefits and set up.
