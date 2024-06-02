@@ -2,8 +2,8 @@
 This project showcases an end-to-end machine learning project. It makes use of the the [ZenML](https://www.zenml.io/) machine learning 
 oprations (MLOps) structure to develop both the model steps
 and pipelines. A classification model is trained on the [iris dataset](https://en.wikipedia.org/wiki/Iris_flower_data_set) and its entire life cycle is monitored via the MLFlow model tracking. The model is deployed locally using the MLFlow deployment service. An interactive dashboard  is built using the [shiny](https://shiny.posit.co/py/) python framework to showcase batch prediction while the MLFlow deployment service daemon is running locally.
+
 ![Dashboard UI](assets/training_pipeline.png)
-![Dashboard UI](assets/deployment_pipeline.png)
 ![Dashboard UI](assets/dashboard_ui.png)
 ![Dashboard UI](assets/dashboard_ui_2.png)
 
