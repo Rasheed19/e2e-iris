@@ -3,8 +3,15 @@ This project showcases an end-to-end machine learning project. It makes use of t
 oprations (MLOps) structure to develop both the model steps
 and pipelines. A classification model is trained on the [iris dataset](https://en.wikipedia.org/wiki/Iris_flower_data_set) and its entire life cycle is monitored via the MLflow model tracking. The model is deployed locally using the MLflow deployment service. An interactive dashboard  is built using the [shiny](https://shiny.posit.co/py/) python framework to showcase batch prediction while the MLflow deployment service daemon is running locally.
 
+The training pipeline for this project looks like this (which can be customisrd to fit your use cases):
+
 ![Dashboard UI](assets/training_pipeline.png)
+
+After running the deployment pipeline, the running prediction service can now be used to make predictions. This is facilitated by the shiny app. You can make a single-sample prediction, which looks like this:
+
 ![Dashboard UI](assets/dashboard_ui.png)
+
+or upload a `csv` file that contains the features of the irises to be predicted (batch prediction). In this case, the UI looks like this: 
 ![Dashboard UI](assets/dashboard_ui_2.png)
 
 ## Set up
